@@ -26,3 +26,4 @@ end
   def personality_params
     params.require(:personality).permit(:name, :description, :price)
   end
+
