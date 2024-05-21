@@ -1,0 +1,20 @@
+@import "home";
+.center-text {
+    text-align: center;
+}
+.footer-basic {
+    padding: 40px 0;
+    background-color: #f1f7fc;
+    text-align: center;
+}
+.footer-basic .social a {
+    margin: 0 10px;
+}
+.footer-basic .list-inline {
+    padding: 0;
+    list-style: none;
+}
+.footer-basic .list-inline-item {
+    display: inline;
+    margin: 0 10px;
+}
