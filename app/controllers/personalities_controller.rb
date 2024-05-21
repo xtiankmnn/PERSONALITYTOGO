@@ -19,10 +19,11 @@ class PersonalitiesController < ApplicationController
       render 'new'
     end
   end
-end
 
   private
 
   def personality_params
     params.require(:personality).permit(:name, :description, :price)
   end
+end
+
