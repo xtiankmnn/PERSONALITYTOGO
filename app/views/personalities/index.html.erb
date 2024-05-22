@@ -6,7 +6,6 @@
     <% @personalities.each_with_index do |personality, i| %>
       <div class="col-md-3 mb-4">
         <div class="card" style="width: 18rem;">
-         <%# <img src="personality.img" class="card-img-top" alt="Card image <%= i + 1 %>
           <%= image_tag "cards/#{personality.code}.svg"%>
           <div class="card-body">
             <h5 class="card-title"><%= personality.name %></h5>
