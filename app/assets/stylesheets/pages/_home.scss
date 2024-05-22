@@ -1,1 +1,11 @@
-// Specific CSS for your home-page
+// // Specific CSS for your home-page
+@import "home";
+
+  .body {
+      background: linear-gradient(135deg, #f8f9fa, #e0f7fa);
+      font-family: 'Arial', sans-serif;
+      color: black;
+        }
+    .center-text {
+      text-align: center;
+      margin-top: 20px;}
