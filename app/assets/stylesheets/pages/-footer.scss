@@ -1,11 +1,11 @@
-@import "footer";
-.footer-basic {
+@import "home";
+
+.footer-bottom {
   padding:40px 0;
   background-color:#ffffff;
   color:#4b4c4d;
 }
-
-.footer-basic ul {
+.footer-bottom ul {
   padding:0;
   list-style:none;
   text-align:center;
@@ -14,26 +14,26 @@
   margin-bottom:0;
 }
 
-.footer-basic li {
+.footer-bottom li {
   padding:0 10px;
 }
 
-.footer-basic ul a {
+.footer-bottom ul a {
   color:inherit;
   text-decoration:none;
   opacity:0.8;
 }
 
-.footer-basic ul a:hover {
+.footer-bottom ul a:hover {
   opacity:1;
 }
 
-.footer-basic .social {
+.footer-bottom .social {
   text-align:center;
   padding-bottom:25px;
 }
 
-.footer-basic .social > a {
+.footer-bottom .social > a {
   font-size:24px;
   width:40px;
   height:40px;
@@ -47,11 +47,11 @@
   opacity:0.75;
 }
 
-.footer-basic .social > a:hover {
+.footer-bottom .social > a:hover {
   opacity:0.9;
 }
 
-.footer-basic .copyright {
+.footer-bottom .copyright {
   margin-top:15px;
   text-align:center;
   font-size:13px;
