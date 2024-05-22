@@ -9,4 +9,10 @@ Rails.application.routes.draw do
   end
   resources :bookings, except: [:new, :create]
 
+
+
+    get "/test", to: "personalities#choose"  #-> custom new route for external test ans show personalities
+
+    # custom edit - edit the current_user to set persnality_id
+    patch "personalities/:id/assign", to: "personalities#assign"
 end
