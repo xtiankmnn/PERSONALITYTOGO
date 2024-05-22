@@ -13,7 +13,7 @@
                 hint: ("#{@minimum_password_length} characters minimum" if @minimum_password_length),
                 input_html: { autocomplete: "new-password" } %>
     <%= f.input :personality,
-                collection: [ "optimist", "commander", "autist"] %>
+                collection: Personality.all %>
                 <%# Personality.all %>
     <%= f.input :password_confirmation,
                 required: true,
