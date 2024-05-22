@@ -1,0 +1,7 @@
+<h1>create a booking</h1>
+
+<%= simple_form_for [@personality, @booking] do |f| %>
+  <%= f.input :created_at %>
+   <%= f.association :user, prompt: "Select a date" %>
+  <%= f.submit %>
+<% end %>
