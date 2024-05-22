@@ -21,16 +21,16 @@ class PersonalitiesController < ApplicationController
   # end
 
 
-  def choose
-    current_user.personality = Personality.find(params[:personality_id])
-    raise
-    current_user.save
-  end
+  # def choose
+  #   current_user.personality = Personality.find(params[:personality_id])
+  #   raise
+  #   current_user.save
+  # end
 
-  def assign
-    @personality = Personality.new(params[:personality_id])
-    @personality.current_user = @personality
-  end
+  # def assign
+  #   @personality = Personality.new(params[:personality_id])
+  #   @personality.current_user = @personality
+  # end
 
   private
 
