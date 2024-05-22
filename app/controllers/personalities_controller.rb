@@ -26,4 +26,3 @@ class PersonalitiesController < ApplicationController
     params.require(:personality).permit(:name, :description, :price)
   end
 end
-
