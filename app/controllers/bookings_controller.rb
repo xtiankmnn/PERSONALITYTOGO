@@ -25,10 +25,6 @@ class BookingsController < ApplicationController
   def edit
   end
 
-<<<<<<< HEAD
-=======
-  
->>>>>>> c123b5c10cf1ea12ca72124562b3612175fbb05d
   def update
     if @booking.update(booking_params)
       redirect_to @booking, notice: 'Booking was successfully updated.'
