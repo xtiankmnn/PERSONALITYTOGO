@@ -14,10 +14,22 @@ User.destroy_all
 Personality.destroy_all
 
 personalities = [
-  "Architect (INTJ)", "Logician (INTP)", "Commander (ENTJ)", "Debater (ENTP)",
-  "Advocate (INFJ)", "Mediator (INFP)", "Protagonist (ENFJ)", "Campaigner (ENFP)",
-  "Logistician (ISTJ)", "Defender (ISFJ)", "Executive (ESTJ)", "Consul (ESFJ)",
-  "Virtuoso (ISTP)", "Adventurer (ISFP)", "Entrepreneur (ESTP)", "Entertainer (ESFP)"
+  "Architect (INTJ)",
+  "Logician (INTP)",
+  "Commander (ENTJ)",
+  "Debater (ENTP)",
+  "Advocate (INFJ)",
+  "Mediator (INFP)",
+  "Protagonist (ENFJ)",
+  "Campaigner (ENFP)",
+  "Logistician (ISTJ)",
+  "Defender (ISFJ)",
+  "Executive (ESTJ)",
+  "Consul (ESFJ)",
+  "Virtuoso (ISTP)",
+  "Adventurer (ISFP)",
+  "Entrepreneur (ESTP)",
+  "Entertainer (ESFP)"
 ]
 
 descriptions = [
@@ -39,13 +51,31 @@ descriptions = [
   "Live for each second without hesitation."
 ]
 
-codes = [
-  "ISTJ", "ISFJ", "INFJ", "INTJ",
-  "ISTP", "ISFP", "INFP", "INTP",
-  "ESTP", "ESFP", "ENFP", "ENTP",
-  "ESTJ", "ESFJ", "ENFJ", "ENTJ"
-]
+# codes = [
+#   "ISTJ", "ISFJ", "INFJ", "INTJ",
+#   "ISTP", "ISFP", "INFP", "INTP",
+#   "ESTP", "ESFP", "ENFP", "ENTP",
+#   "ESTJ", "ESFJ", "ENFJ", "ENTJ"
+# ]
 
+codes = [
+  "INTJ",
+  "INTP",
+  "ENTJ",
+  "ENTP",
+  "INFJ",
+  "INFP",
+  "ENFJ",
+  "ENFP",
+  "ISTJ",
+  "ISFJ",
+  "ESTJ",
+  "ESFJ",
+  "ISTP",
+  "ISFP",
+  "ESTP",
+  "ESFP"
+]
 
 (0..15).each do |num|
   Personality.create(name: personalities[num], description: descriptions[num], code: codes[num], price: Faker::Number.between(from: 100, to: 1000))
