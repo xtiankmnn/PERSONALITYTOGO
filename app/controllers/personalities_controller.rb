@@ -4,7 +4,6 @@ class PersonalitiesController < ApplicationController
   end
 
   def show
-    raise
     @personality = Personality.find(params[:id])
   end
 
