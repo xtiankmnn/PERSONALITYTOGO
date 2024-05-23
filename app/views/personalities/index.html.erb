@@ -1,6 +1,13 @@
 <h1>Personalities#index</h1>
 
 <div class="container">
+<div class="col-md-3 mb-4">
+<h2>your assigned personality here</h2>
+<h3><%= current_user.personality.name %></h3>
+</div>
+</div>
+
+<div class="container">
   <div class="row">
     <% @personalities.each do |personality| %>
       <div class="col-md-3 mb-4">
@@ -29,6 +36,7 @@
   </div>
 </div>
 </div>
+
 </div>
 
 <div class="footer-bottom">
@@ -64,3 +72,4 @@
         <p class="copyright">circular © 2024</p>
     </footer>
 </div>
+
