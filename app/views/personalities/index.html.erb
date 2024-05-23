@@ -1,9 +1,10 @@
-<h1>Personalities#index</h1>
 
-<div class="container">
-<div class="col-md-3 mb-4">
-<h2>your assigned personality here</h2>
-<h3><%= current_user.personality.name %></h3>
+
+<div class="card">
+<div class="row-md-3 mb-4">
+<h5>Your brand new personality is <h2> <%=  current_user.personality.name %></h2></h5>
+<h4>Are you not happy with that? Sell it!</h4>
+<a href="/personalities/sell" class="btn btn-warning">Sell your personality NOW!</a>
 </div>
 </div>
 
@@ -72,4 +73,3 @@
         <p class="copyright">circular © 2024</p>
     </footer>
 </div>
-
