@@ -4,6 +4,7 @@ class PersonalitiesController < ApplicationController
   end
 
   def show
+    raise
     @personality = Personality.find(params[:id])
   end
 
@@ -13,9 +14,14 @@ class PersonalitiesController < ApplicationController
     current_user.save
   end
 
+
+  # when i click in home page on Personality Test -> I want that User has assigned a RANDOM Personality
+  # current_user = current_user.Personality_id
+  # and clicking brings me to the personality index with ASSIGNED personality of User on the top of the index page
   def assign
-    @personality = Personality.new(params[:id])
-    @personality.current_user = @personality
+    current_user.personality = Personality.first
+    current_user.save
+    redirect_to personalities_path
   end
 
   private

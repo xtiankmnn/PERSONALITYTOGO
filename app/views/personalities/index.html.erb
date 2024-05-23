@@ -1,6 +1,13 @@
 <h1>Personalities#index</h1>
 
 <div class="container">
+<div class="col-md-3 mb-4">
+<h2>your assigned personality here</h2>
+<h3><%= current_user.personality.name %></h3>
+</div>
+</div>
+
+<div class="container">
   <div class="row">
     <% @personalities.each do |personality| %>
       <div class="col-md-3 mb-4">
@@ -19,7 +26,7 @@
             <h5 class="card-title"><%= personality.name %></h5>
             <p class="card-text"><%= personality.description %></p>
             <div class="card-btn mt-auto">
-          
+
             </div>
 
           </div>
@@ -27,4 +34,5 @@
       </div>
     <% end %>
   </div>
+</div>
 </div>
