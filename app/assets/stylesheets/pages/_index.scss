@@ -1,1 +1,9 @@
 // Import page-specific CSS files here.
+.card-body {
+  display: flex;
+  flex-direction: column;
+}
+
+.card-btn {
+  margin-top: auto;
+}
