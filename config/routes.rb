@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root to: "pages#home"
 
   get "personalities/assign", to: "personalities#assign"
-  get "personalities/sell", to: "personalities#sell"
+  get "personalities/:id/sell", to: "personalities#sell", as: "sell_personality"
   resources :personalities do
     resources :bookings, only: [:new, :create]
   end
