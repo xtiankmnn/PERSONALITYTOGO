@@ -1,19 +1,25 @@
 <h1>Booking Details</h1>
+<div class="d-grid w-20 gap-10 col-6 mx-auto mt-5 ">
+  <h2>Here is your cart</h2>
+</div>
 
-<p>
-  <strong>Personality:</strong>
-  <%= @booking.personality_id %>
-</p>
+<div class="container mx-auto mt-5">
+  <div class="row justify-content-center mt-1">
+    <% @bookings.each do |booking| %>
+      <div class="col-lg-4 mb-4">
+        <div class="card">
+          <img src="<%= booking.image_url %>" class="card-img-top" alt="<%= booking.title %>">
+          <div class="card-body">
+            <h5 class="card-title"><%= booking.title %></h5>
+            <p class="card-text"><%= booking.description %></p>
+            <p class="card-text"><strong>Price:</strong> <%= number_to_currency(booking.price) %></p>
+            <%= link_to 'Edit', edit_booking_path(booking), class: 'btn btn-primary btn-edit' %>
+            <%= link_to 'Delete', booking, method: :delete, data: { confirm: 'Are you sure?' }, class: 'btn btn-danger btn-delete' %>
+          </div>
+        </div>
+      </div>
+    <% end %>
+  </div>
+  <%= link_to 'Back to Bookings', bookings_path, class: 'btn btn-secondary mt-4' %>
+</div>
 
-<p>
-  <strong>Start Date:</strong>
-  <%= @booking.start_date %>
-</p>
-
-<p>
-  <strong>End Date:</strong>
-  <%= @booking.end_date %>
-</p>
-
-<%= link_to 'Edit', edit_booking_path(@booking) %> |
-<%= link_to 'Back', bookings_path %>

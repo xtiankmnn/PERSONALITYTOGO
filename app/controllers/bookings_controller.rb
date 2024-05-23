@@ -3,6 +3,7 @@ class BookingsController < ApplicationController
 
   def index
     @personalities = Personality.all
+    @bookings = Booking.all
   end
 
   def show
@@ -24,20 +25,22 @@ class BookingsController < ApplicationController
   end
 
   def edit
-
+    @booking = Booking.find(params[:id])
   end
 
   def update
+    @booking = Booking.find(params[:id])
     if @booking.update(booking_params)
-      redirect_to @booking, notice: 'Booking was successfully updated.'
+      redirect_to bookings_path, notice: 'Booking was successfully updated.'
     else
       render :edit
     end
   end
 
   def destroy
+    @booking = Booking.find(params[:id])
     @booking.destroy
-    redirect_to bookings_url, notice: 'Booking was successfully destroyed.'
+    redirect_to bookings_path, notice: 'Booking was successfully deleted.'
   end
 
   private
@@ -47,6 +50,7 @@ class BookingsController < ApplicationController
   end
 
   def booking_params
-    params.require(:booking).permit(:personality_id, :start_date, :end_date)
+    params.require(:booking).permit(:title, :description, :image_url)
   end
 end
+
