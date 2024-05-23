@@ -1,1 +1,76 @@
 // // Specific CSS for your home-page
+
+body {
+    background: linear-gradient(135deg, #f8f9fa, #e0f7fa);
+    font-family: 'Arial', sans-serif;
+    color: black;
+}
+.center-text {
+    text-align: center;
+    margin-top: 20px;
+}
+.footer-bottom {
+    padding: 10px 0;
+    background-color: #acb7ae;
+    color: black;
+    text-align: center;
+}
+.footer-bottom .social a {
+    margin: 0 10px;
+    color: #ffffff;
+}
+.footer-bottom .list-inline {
+    padding: 0;
+    list-style: none;
+}
+.footer-bottom .list-inline-item {
+    display: inline;
+    margin: 0 10px;
+}
+.footer-bottom .list-inline-item a {
+    color: #ffffff;
+    text-decoration: none;
+}
+.footer-bottom .list-inline-item a:hover {
+    text-decoration: underline;
+}
+
+.btn-dark {
+    background-color: hsl(216, 3%, 30%);
+    border-color: #000001;
+}
+.btn-dark:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+.btn-dark {
+  padding: 0;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.social-icon {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.social-icon__item {
+    margin-right: 30px;
+}
+
+.social-icon__item:last-child {
+    margin-right: 0;
+}
+
+.social-icon__link {
+    text-decoration: none;
+    color: inherit;
+    display: flex;
+    align-items: center;
+}
