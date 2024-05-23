@@ -6,4 +6,8 @@ Rails.application.routes.draw do
     resources :bookings, only: [:new, :create]
   end
   resources :bookings, except: [:new, :create]
+
+  get "/test", to: "personalities#choose"
+  patch "personalities/:id/assign", to: "personalities#assign"
+
 end
