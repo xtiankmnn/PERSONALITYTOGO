@@ -1,75 +1,57 @@
-<h1>Personalities#index</h1>
 
 <div class="container">
-<div class="col-md-3 mb-4">
-<h2>your assigned personality here</h2>
-<h3><%= current_user.personality.name %></h3>
-</div>
+  <div class="row">
+    <div class="col-md-3 mb-4">
+      <h1>Personalities#index</h1>
+       <h2>Your assigned personality here</h2>
+      <h3><%= current_user.personality.name %></h3>
+    </div>
+  </div>
 </div>
 
 <div class="container">
   <div class="row">
     <% @personalities.each do |personality| %>
-      <div class="col-md-3 mb-4">
-
-        <div class="card" style="width: 18rem;">
-
-          <%= image_tag "cards/#{personality.code}.svg"%>
-          <div class="card-body">
-            <h5 class="card-title"><%= personality.name %></h5>
-            <p class="card-text"><%= personality.description %></p>
-             <%= link_to 'See More', personality_path(personality), class: 'btn btn-info' %>
-
+      <div class="col-md-3 mb-4 shadow p-7 mb-4 rounded">
         <div class="card h-100" style="width: 18rem;">
           <%= image_tag "cards/#{personality.code}.svg", class: "card-img-top", alt: "personalities" %>
           <div class="card-body d-flex flex-column">
             <h5 class="card-title"><%= personality.name %></h5>
             <p class="card-text"><%= personality.description %></p>
-            <div class="card-btn mt-auto">
-
-            </div>
-
+            <%= link_to 'See More', personality_path(personality), class: 'btn btn-info mt-auto' %>
           </div>
         </div>
       </div>
     <% end %>
   </div>
 </div>
-</div>
-
-</div>
 
 <div class="footer-bottom">
-    <footer >
-<body>
+  <footer>
     <div>
-        <ul class="list-inline ">
-            <li class="list-inline-item"><a href="#">Home</a></li>
-            <li class="list-inline-item"><a href="#">Services</a></li>
-            <li class="list-inline-item"><a href="#">About</a></li>
-            <li class="list-inline-item"><a href="#">Terms</a></li>
-            <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-        </ul>
-
+      <ul class="list-inline">
+        <li class="list-inline-item"><a href="#">Home</a></li>
+        <li class="list-inline-item"><a href="#">Services</a></li>
+        <li class="list-inline-item"><a href="#">About</a></li>
+        <li class="list-inline-item"><a href="#">Terms</a></li>
+        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+      </ul>
     </div>
-        <ul class="social-icon">
-            <li class="social-icon__item"><a class="social-icon__link" href="#">
-                <ion-icon name="logo-facebook"></ion-icon>
-            </a></li>
-            <li class="social-icon__item"><a class="social-icon__link" href="#">
-                <ion-icon name="logo-twitter"></ion-icon>
-            </a></li>
-            <li class="social-icon__item"><a class="social-icon__link" href="#">
-                <ion-icon name="logo-linkedin"></ion-icon>
-            </a></li>
-            <li class="social-icon__item"><a class="social-icon__link" href="#">
-                <ion-icon name="logo-instagram"></ion-icon>
-            </a></li>
-        </ul>
-
+    <ul class="social-icon">
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-facebook"></ion-icon>
+      </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-twitter"></ion-icon>
+      </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-linkedin"></ion-icon>
+      </a></li>
+      <li class="social-icon__item"><a class="social-icon__link" href="#">
+        <ion-icon name="logo-instagram"></ion-icon>
+      </a></li>
+    </ul>
     <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
-</body>
-        <p class="copyright">circular © 2024</p>
-    </footer>
+    <p class="copyright">circular © 2024</p>
+  </footer>
 </div>
-
