@@ -2,7 +2,7 @@ class BookingsController < ApplicationController
   before_action :set_booking, only: [:show, :edit, :update, :destroy]
 
   def index
-    @personalities = Personality.all
+    @bookings = current_user.bookings
   end
 
   def show
@@ -14,10 +14,10 @@ class BookingsController < ApplicationController
   end
 
   def create
-    @booking = Booking.new(booking_params)
-    @booking.user = current_user # Ensure this line is based on your authentication setup
+    @booking = Booking.new(personality_id: params[:personality_id], user: current_user)
+
     if @booking.save
-      redirect_to @booking, notice: 'Booking was successfully created.'
+      redirect_to bookings_path, notice: 'Booking was successfully created.'
     else
       render :new
     end
