@@ -1,0 +1,38 @@
+<h1>Dont worry and sell yourself</h1>
+
+<body>
+  <div id="booking" class="section">
+    <div class="section-center">
+      <div class="container">
+        <div class="row">
+          <div class="booking-form">
+            <div class="booking-bg"></div>
+            <form>
+              <div class="form-header">
+                <h2>Sell your Personality</h2>
+              </div>
+              <div class="row">
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label">Start Date</span>
+                    <input class="form-control" type="date" required>
+                  </div>
+                </div>
+                <div class="col-md-6">
+                  <div class="form-group">
+                    <span class="form-label"> End Date</span>
+                    <input class="form-control" type="date" required>
+                  </div>
+                </div>
+              </div>
+
+              <div class="form-btn">
+                <%= link_to "Sell Now", bookings_path, class: "submit-btn"%>
+              </div>
+            </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
