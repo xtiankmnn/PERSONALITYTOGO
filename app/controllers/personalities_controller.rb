@@ -4,15 +4,14 @@ class PersonalitiesController < ApplicationController
   end
 
   def show
-    raise
     @personality = Personality.find(params[:id])
   end
 
-  def choose
-    current_user.personality = personalities.find(params[:personality_id])
-    raise
-    current_user.save
-  end
+  # def choose
+  #   current_user.personality = personalities.find(params[:personality_id])
+  #   raise
+  #   current_user.save
+  # end
 
 
   # when i click in home page on Personality Test -> I want that User has assigned a RANDOM Personality
