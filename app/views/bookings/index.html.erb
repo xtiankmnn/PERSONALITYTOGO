@@ -1,52 +1,8 @@
-<body>
-  <div id="booking" class="section">
-    <div class="section-center">
-      <div class="container">
-        <div class="row">
-          <div class="booking-form">
-            <div class="booking-bg"></div>
-            <form>
-              <div class="form-header">
-                <h2>Make your Booking</h2>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <span class="form-label">Start Date</span>
-                    <input class="form-control" type="date" required>
-                  </div>
-                </div>
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <span class="form-label"> End Date</span>
-                    <input class="form-control" type="date" required>
-                  </div>
-                </div>
-              </div>
-              <div class="row">
-                <div class="col-md-6">
-                  <div class="form-group">
-                    <span class="form-label">Personalities</span>
-                    <select class="form-control">
-                      <% @personalities.each_with_index do |personality, i| %>
-                        <option><%= personality.name %></option>
-                      <% end %>
-                    </select>
-                    <span class="select-arrow"></span>
-                  </div>
-                </div>
-              </div>
-              <div class="form-group">
-                <span class="form-label">Email</span>
-                <input class="form-control" type="email" placeholder="Enter your email">
-              </div>
-              <div class="form-btn">
-                <button class="submit-btn">Book Now</button>
-              </div>
-            </form>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</body>
+<p>your bookings</p>
+<% @bookings.each do |booking| %>
+<div class="card">
+<ul>
+<li> <%= booking.personality.name %></li>
+</ul>
+</div>
+<% end %>

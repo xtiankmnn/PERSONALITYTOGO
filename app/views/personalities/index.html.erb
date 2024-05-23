@@ -4,8 +4,10 @@
 <div class="row-md-3 mb-4">
 <h5>Your brand new personality is <h2> <%=  current_user.personality.name %></h2></h5>
 <h4>Are you not happy with that? Sell it!</h4>
-<a href="/personalities/sell" class="btn btn-warning">Sell your personality NOW!</a>
+<%= link_to "Sell your personality NOW!", sell_personality_path(current_user.personality) %>
+
 </div>
+<h4>And check our offer of personalities to go</h4>
 </div>
 
 <div class="container">
