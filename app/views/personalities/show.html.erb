@@ -1,10 +1,13 @@
-<h1><%= @personality.name %></h1>
-
-<h2>Buy this new personality and become a better person :D</h2>
-
+<div class="container">
+<h1>"<%= @personality.name %>"</h1>
+<h2>Buy this new personality and become a better person </h2>
 
 <p><%= @personality.description %></p>
-<p> It would cost you <%= @personality.price %></p>
+<p> It would cost you "<%= @personality.price %>"</p>
+
+</div>
+
+<div class="container">
 
 <body>
   <div id="booking" class="section">
@@ -31,7 +34,7 @@
                   </div>
                 </div>
               </div>
-          
+
               <div class="form-btn">
                 <button class="submit-btn">Book Now</button>
               </div>
@@ -42,6 +45,5 @@
     </div>
   </div>
 </body>
-
-
-<h6 style="margin-top:20px"><%= link_to "BAck to all personalities", personalities_path%></h6>
+<h6 style="margin-top:20px"><%= link_to "Back to all personalities", personalities_path%></h6>
+</div>
