@@ -3,11 +3,9 @@
     <%= link_to "#", class: "navbar-brand" do %>
       <%= image_tag "https://www.creativefabrica.com/wp-content/uploads/2022/09/25/Head-Wolf-Logo-Design-Inspiration-Graphics-39255511-2-580x387.jpg" %>
     <% end %>
-   <form class="d-flex" role="search">
-      <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
-      <button class="btn btn-outline-success" type="submit">Search</button>
-    </form>
-
+  <%# <nav class="navbar" style="background-color: #e3f2fd;">
+  <!-- Navbar content --> %>
+<%# </nav> %>
     <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
@@ -37,6 +35,13 @@
           </li>
         <% end %>
       </ul>
+          <select name="language" id="language">
+  <option value="Chinese">Chinese</option>
+  <option value="German" >German</option>
+  <option value="English" selected>English</option>
+  <option value="Portuguese">Portuguese</option>
+  <option value="Ruby" disabled>Ruby</option>
+</select>
     </div>
   </div>
 </div>
