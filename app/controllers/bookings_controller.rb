@@ -10,6 +10,7 @@ class BookingsController < ApplicationController
 
   def new
     @booking = Booking.new
+    @personality = Personality.find(params[:personality_id])
   end
 
   def create
@@ -23,7 +24,7 @@ class BookingsController < ApplicationController
   end
 
   def edit
-    
+
   end
 
   def update
