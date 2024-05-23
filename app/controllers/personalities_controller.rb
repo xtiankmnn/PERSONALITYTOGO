@@ -1,6 +1,8 @@
 class PersonalitiesController < ApplicationController
   def index
     @personalities = Personality.all
+    @user = user_signed_in? ? current_user : User.new
+    @user.personality = Personality.all.sample
   end
 
   def show
@@ -11,15 +13,16 @@ class PersonalitiesController < ApplicationController
   # current_user = current_user.Personality_id
   # and clicking brings me to the personality index with ASSIGNED personality of User on the top of the index page
   def assign
-    current_user.personality = Personality.all.sample
-    current_user.save
+    @user.personality = Personality.all.sample
+    @user.save
     redirect_to personalities_path
   end
 
   def sell
-    current_user.personality = Personality.all.sample
+    @user.personality = Personality.all.sample
     # redirect_to sell_personalities_path
   end
+
 
   private
 

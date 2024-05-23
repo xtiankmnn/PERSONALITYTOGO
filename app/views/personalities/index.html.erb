@@ -1,75 +1,71 @@
 <div class="container">
-
-<div class="row-md-3 mb-4 ">
-<h5>Your brand new personality is  <h2>"<%=  current_user.personality.name %>"</h2></h5>
-<h4>Are you not happy with that? Rent It Out!</h4>
-<a href="/personalities/sell" class="btn btn-info"><strong>JOIN NOW</strong></a>
-</div>
-
+  <div class="row-md-3 mb-4 ">
+    <h5>Your brand new personality is
+      <h2>"<%=  @user.personality.name  %>"</h2>
+    </h5>
+    <h4>Are you not happy with that? Rent It Out!</h4>
+    <a href="/personalities/sell" class="btn btn-info"><strong>JOIN NOW</strong></a>
+  </div>
   <div class="row">
     <div class="col-md-3 mb-4">
       <h1>Personalities#index</h1>
-       <h2>Your assigned personality here</h2>
-      <h3><%= current_user.personality.name %></h3>
+      <h2>Your assigned personality here</h2>
+      <h3><%= @user.personality.name %></h3>
     </div>
   </div>
-
-<div class="card">
-<div class="row-md-3 mb-4">
-<h5>Your brand new personality is <h2> <%=  current_user.personality.name %></h2></h5>
-<h4>Are you not happy with that? Sell it!</h4>
-<%= link_to "Sell your personality NOW!", sell_personality_path(current_user.personality) %>
-
-</div>
-
-<h4>And check our offer of personalities to go</h4>
-
-</div>
-
-<div class="container">
-  <div class="row">
-    <% @personalities.each do |personality| %>
-      <div class="col-md-3 mb-4 shadow p-7 mb-4 rounded">
-        <div class="card h-100" style="width: 18rem;">
-          <%= image_tag "cards/#{personality.code}.svg", class: "card-img-top", alt: "personalities" %>
-          <div class="card-body d-flex flex-column">
-            <h5 class="card-title"><%= personality.name %></h5>
-            <p class="card-text"><%= personality.description %></p>
-            <%= link_to 'See More', personality_path(personality), class: 'btn btn-info mt-auto' %>
+  <div class="card">
+    <div class="row-md-3 mb-4">
+      <h5>Your brand new personality is
+        <h2> <%=  @user.personality.name %></h2>
+      </h5>
+      <h4>Are you not happy with that? Sell it!</h4>
+      <%= link_to "Sell your personality NOW!", sell_personality_path(@user.personality)%>
+    </div>
+    <h4>And check our offer of personalities to go</h4>
+  </div>
+  <div class="container">
+    <div class="row">
+      <% @personalities.each do |personality| %>
+        <div class="col-md-3 mb-4 shadow p-7 mb-4 rounded">
+          <div class="card h-100" style="width: 18rem;">
+            <%= image_tag "cards/#{personality.code}.svg", class: "card-img-top", alt: "personalities" %>
+            <div class="card-body d-flex flex-column">
+              <h5 class="card-title"><%= personality.name %></h5>
+              <p class="card-text"><%= personality.description %></p>
+              <%= link_to 'See More', personality_path(personality), class: 'btn btn-info mt-auto' %>
+            </div>
           </div>
         </div>
-      </div>
-    <% end %>
-  </div>
-</div>
-
-<div class="footer-bottom">
-  <footer>
-    <div>
-      <ul class="list-inline">
-        <li class="list-inline-item"><a href="#">Home</a></li>
-        <li class="list-inline-item"><a href="#">Services</a></li>
-        <li class="list-inline-item"><a href="#">About</a></li>
-        <li class="list-inline-item"><a href="#">Terms</a></li>
-        <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
-      </ul>
+      <% end %>
     </div>
-    <ul class="social-icon">
-      <li class="social-icon__item"><a class="social-icon__link" href="#">
-        <ion-icon name="logo-facebook"></ion-icon>
-      </a></li>
-      <li class="social-icon__item"><a class="social-icon__link" href="#">
-        <ion-icon name="logo-twitter"></ion-icon>
-      </a></li>
-      <li class="social-icon__item"><a class="social-icon__link" href="#">
-        <ion-icon name="logo-linkedin"></ion-icon>
-      </a></li>
-      <li class="social-icon__item"><a class="social-icon__link" href="#">
-        <ion-icon name="logo-instagram"></ion-icon>
-      </a></li>
-    </ul>
-    <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
-    <p class="copyright">circular © 2024</p>
-  </footer>
-</div>
+  </div>
+  <div class="footer-bottom">
+    <footer>
+      <div>
+        <ul class="list-inline">
+          <li class="list-inline-item"><a href="#">Home</a></li>
+          <li class="list-inline-item"><a href="#">Services</a></li>
+          <li class="list-inline-item"><a href="#">About</a></li>
+          <li class="list-inline-item"><a href="#">Terms</a></li>
+          <li class="list-inline-item"><a href="#">Privacy Policy</a></li>
+        </ul>
+      </div>
+      <ul class="social-icon">
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="logo-facebook"></ion-icon>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="logo-twitter"></ion-icon>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="logo-linkedin"></ion-icon>
+          </a></li>
+        <li class="social-icon__item"><a class="social-icon__link" href="#">
+            <ion-icon name="logo-instagram"></ion-icon>
+          </a></li>
+      </ul>
+      <script src="https://unpkg.com/ionicons@5.5.2/dist/ionicons.js"></script>
+      <p class="copyright">circular © 2024</p>
+    </footer>
+  </div>
 </div>
