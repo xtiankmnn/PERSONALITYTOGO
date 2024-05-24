@@ -1,10 +1,18 @@
 <p>Enjoy your new personalities</p>
+<div class="container">
 <% @bookings.each do |booking| %>
-<div class="card">
-<ul>
-<li> <%= booking.personality.name %></li>
-<li> Price: <%= booking.personality.price %> </li>
-<%= link_to "Delete", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Sure?"} %>
-</ul>
+<div class="col-lg-3 mb-4 shadow p-10 mb-4 rounded">
+
+<h2> <%=  booking.personality.name %></h2>
+<p>About: <%= booking.personality.description %> </p>
+<p> Price: <%= booking.personality.price %> $</p>
+
+ <%= image_tag "cards/#{booking.personality.code}.svg", class: "card-img-top", style: "width:250px", alt: "personalities" %>
+
+
+<%= link_to "Delete", booking_path(booking), style: "width:100px", class:"btn btn-info", data: {turbo_method: :delete, turbo_confirm: "Sure?"} %>
 </div>
 <% end %>
+
+<h6 style="margin-top:20px"><%= link_to "Back to all personalities", personalities_path, class:"btn btn-primary" %></h6>
+</div>
