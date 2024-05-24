@@ -1,0 +1,11 @@
+.navbar{
+  position: sticky;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  background-color: rgba(255, 255, 255, 0.808);
+}
+
+.navbar + body {
+  padding-top: 60px;
+}

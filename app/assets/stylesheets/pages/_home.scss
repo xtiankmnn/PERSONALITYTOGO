@@ -5,6 +5,10 @@ body {
     color: black;
 }
 .center-text {
+    margin-left: 40px;
+    margin-right: 40px;
+    padding-left: 40px;
+    padding-right: 40px;
     text-align: center;
     margin-top: 20px;
 }
@@ -15,7 +19,7 @@ body {
     text-align: center;
 }
 .footer-bottom .social a {
-    margin: 0 10px;
+    margin: 10px 10px;
     color: #ffffff;
 }
 .footer-bottom .list-inline {
@@ -35,7 +39,7 @@ body {
 }
 
 .btn-dark {
-    background-color: #000001;
+    background-color: #000000;
     border-color: #000001;
 }
 .btn-dark:hover {
@@ -43,6 +47,8 @@ body {
     border-color: #0056b3;
 }
 .btn-dark {
+  height: 48px;
+  width: 100%;
   padding: 0;
   margin: 0;
   display: flex;
@@ -75,4 +81,8 @@ body {
 }
 .container{
   text-align: center;
+}
+
+h4{
+  margin: 0 0 0 0
 }
