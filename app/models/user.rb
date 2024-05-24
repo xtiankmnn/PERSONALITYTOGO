@@ -5,4 +5,5 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :validatable
   belongs_to :personality, optional: true
   has_many :bookings
+  has_many :personalities, through: :bookings
 end
