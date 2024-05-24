@@ -16,6 +16,7 @@
 <% elsif current_user.personality %>
 <div class="row-md-3 mb-4">
 <h5>You are <h2> <%=  current_user.personality.name %></h2></h5>
+<%= image_tag "cards/#{current_user.personality.code}.svg", class: "card-img-top", style: "width:250px", alt: "personalities" %>
 <h4>Are you not happy with that?</h4>
 <p>
 <%= link_to "RENT IT", sell_personality_path(current_user.personality), class:"btn btn-info"  %>
