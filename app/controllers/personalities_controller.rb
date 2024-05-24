@@ -17,7 +17,7 @@ class PersonalitiesController < ApplicationController
   end
 
   def sell
-    current_user.personality = Personality.all.sample
+    current_user.update(personality: nil)
     # redirect_to sell_personalities_path
   end
 
