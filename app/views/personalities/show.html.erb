@@ -1,6 +1,6 @@
 <div class="container">
 <h1>"<%= @personality.name %>"</h1>
-<h2>Buy this new personality and become a better person </h2>
+<h2>Get this new personality and become a better person </h2>
 
 <p><%= @personality.description %></p>
 <p> It would cost you "<%= @personality.price %>"</p>
@@ -10,35 +10,28 @@
 <div class="container">
 
 <body>
-  <div id="booking" class="section">
+
     <div class="section-center">
       <div class="container">
         <div class="row">
           <div class="booking-form">
             <div class="booking-bg"></div>
               <div class="form-header">
-                <h2>Make your Booking</h2>
+
               </div>
             <form action="/personalities/<%= @personality.id %>/bookings" method="post">
               <div class="row">
-                <div class="col-md-6">
 
-                </div>
-                <div class="col-md-6">
-
-                </div>
               </div>
 
-              <div class="form-btn">
+                <%= link_to "Book Now", personality_bookings_path(@personality), data:{ turbo_method: :post }, class: "btn btn-info"%>
 
-                <%= link_to "Book Now", personality_bookings_path(@personality), data:{ turbo_method: :post }, class: "submit-btn"%>
-              </div>
             </form>
           </div>
         </div>
       </div>
     </div>
-  </div>
+
 </body>
-<h6 style="margin-top:20px"><%= link_to "Back to all personalities", personalities_path%></h6>
+<h6 style="margin-top:20px"><%= link_to "Back to all personalities", personalities_path, class:"btn" %></h6>
 </div>

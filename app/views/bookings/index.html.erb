@@ -1,8 +1,10 @@
-<p>your bookings</p>
+<p>Enjoy your new personalities</p>
 <% @bookings.each do |booking| %>
 <div class="card">
 <ul>
 <li> <%= booking.personality.name %></li>
+<li> Price: <%= booking.personality.price %> </li>
+<%= link_to "Delete", booking_path(booking), data: {turbo_method: :delete, turbo_confirm: "Sure?"} %>
 </ul>
 </div>
 <% end %>
